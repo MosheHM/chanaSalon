@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Change to app directory
+        run: cd my-app
+        
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -31,4 +34,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # Change this if your build output is somewhere else
+          publish_dir: ./my-app/out # Change this if your build output is somewhere else
