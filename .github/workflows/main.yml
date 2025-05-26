@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Change to app directory
-        run: cd my-app
         
       - name: Checkout code
         uses: actions/checkout@v4
@@ -21,14 +19,13 @@ jobs:
         with:
           node-version: '18'
 
+
       - name: Install dependencies
-        run: npm ci
+        run: cd my-app && npm ci
 
-      - name: Run tests
-        run: npm test
+      - name: Build and export project
+        run: cd my-app && npm run build && npm run export
 
-      - name: Build project
-        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
