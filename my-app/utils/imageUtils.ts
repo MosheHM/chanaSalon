@@ -23,7 +23,7 @@ export const compressImage = (file: File, maxWidth = 800, quality = 0.8): Promis
       // Set canvas dimensions
       canvas.width = width
       canvas.height = height
-
+      
       // Draw and compress
       ctx?.drawImage(img, 0, 0, width, height)
 

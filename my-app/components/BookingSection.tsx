@@ -23,11 +23,11 @@ export default function BookingSection() {
   const { t, isRTL } = useLanguage()
 
   const services = [
-    t("keratinTreatment" as any),
-    t("hairStraightening" as any),
-    t("deepConditioning" as any),
-    t("consultation" as any),
-    t("touchUpSession" as any),
+    t("keratinTreatment"),
+    t("hairStraightening"),
+    t("deepConditioning"),
+    t("consultation"),
+    t("touchUpSession"),
   ]
 
   const timeSlots = ["09:00", "10:00", "11:00", "12:00", "14:00", "15:00", "16:00", "17:00", "18:00"]
@@ -54,8 +54,8 @@ export default function BookingSection() {
           transition={{ duration: 0.8 }}
           className={`text-center mb-16 ${isRTL ? "font-heebo" : ""}`}
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-light mb-4">{t("bookYourSessionTitle" as any)}</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t("bookingSubtitle" as any)}</p>
+          <h2 className="font-playfair text-4xl md:text-5xl font-light mb-4">{t("bookYourSessionTitle")}</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t("bookingSubtitle")}</p>
         </motion.div>
 
         <motion.div
@@ -76,7 +76,7 @@ export default function BookingSection() {
                   <input
                     type="text"
                     name="name"
-                    placeholder={t("fullName" as any)}
+                    placeholder={t("fullName")}
                     value={formData.name}
                     onChange={handleInputChange}
                     required
@@ -94,7 +94,7 @@ export default function BookingSection() {
                   <input
                     type="tel"
                     name="phone"
-                    placeholder={t("phoneNumber" as any)}
+                    placeholder={t("phoneNumber")}
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
@@ -115,7 +115,7 @@ export default function BookingSection() {
                 <input
                   type="email"
                   name="email"
-                  placeholder={t("emailAddress" as any)}
+                  placeholder={t("emailAddress")}
                   value={formData.email}
                   onChange={handleInputChange}
                   required
@@ -138,7 +138,7 @@ export default function BookingSection() {
                   }`}
                   dir={isRTL ? "rtl" : "ltr"}
                 >
-                  <option value="">{t("selectService" as any)}</option>
+                  <option value="">{t("selectService")}</option>
                   {services.map((service) => (
                     <option key={service} value={service}>
                       {service}
@@ -182,7 +182,7 @@ export default function BookingSection() {
                     }`}
                     dir={isRTL ? "rtl" : "ltr"}
                   >
-                    <option value="">{t("selectTime" as any)}</option>
+                    <option value="">{t("selectTime")}</option>
                     {timeSlots.map((time) => (
                       <option key={time} value={time}>
                         {time}
@@ -199,7 +199,7 @@ export default function BookingSection() {
                 type="submit"
                 className={`w-full btn-primary text-lg py-4 ${isRTL ? "font-heebo" : ""}`}
               >
-                {t("bookYourSession" as any)}
+                {t("bookYourSession")}
               </motion.button>
             </form>
           ) : (
@@ -214,10 +214,10 @@ export default function BookingSection() {
                 </svg>
               </div>
               <h3 className={`font-playfair text-2xl font-light mb-4 ${isRTL ? "font-heebo" : ""}`}>
-                {t("bookingConfirmed" as any)}
+                {t("bookingConfirmed")}
               </h3>
               <p className={`text-gray-600 mb-6 ${isRTL ? "font-heebo text-right" : ""}`}>
-                {t("confirmationMessage" as any)
+                {t("confirmationMessage")
                   .replace("{name}", formData.name)
                   .replace("{service}", formData.service)
                   .replace("{date}", formData.date)
@@ -227,7 +227,7 @@ export default function BookingSection() {
                 onClick={() => setShowConfirmation(false)}
                 className={`btn-secondary ${isRTL ? "font-heebo" : ""}`}
               >
-                {t("bookAnotherSession" as any)}
+                {t("bookAnotherSession")}
               </button>
             </motion.div>
           )}
