@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function AdminDebug() {
   const [showDebug, setShowDebug] = useState(false)

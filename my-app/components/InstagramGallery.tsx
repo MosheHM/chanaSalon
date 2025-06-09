@@ -6,6 +6,7 @@ import { useRef, useState } from "react"
 import { Instagram, MessageCircle, X } from "lucide-react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination } from "swiper/modules"
+import Image from "next/image"; // Added import
 import { useLanguage } from "@/contexts/LanguageContext"
 import { useAdmin } from "@/contexts/AdminContext"
 import "swiper/css"
@@ -72,9 +73,11 @@ export default function InstagramGallery() {
                     onClick={() => setSelectedImage(index)}
                   >
                     <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200">
-                      <img
+                      <Image
                         src={post.image || "/placeholder.svg"}
                         alt={post.alt}
+                        layout="fill" // Added layout
+                        objectFit="cover" // Added objectFit
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                       />
                     </div>
@@ -145,9 +148,12 @@ export default function InstagramGallery() {
             >
               <X size={32} />
             </button>
-            <img
+            <Image
               src={posts[selectedImage].image || "/placeholder.svg"}
               alt={posts[selectedImage].alt}
+              width={800} // Added width
+              height={600} // Added height
+              objectFit="contain" // Added objectFit
               className="max-w-full max-h-full object-contain rounded-lg"
             />
             <a

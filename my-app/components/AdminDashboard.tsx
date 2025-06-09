@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-
+import Image from "next/image"; // Added import
 import { useState, useRef } from "react"
 import { motion } from "framer-motion"
 import {
@@ -293,9 +293,11 @@ export default function AdminDashboard() {
                   {/* Image Preview */}
                   {imagePreview && (
                     <div className="mb-4">
-                      <img
+                      <Image
                         src={imagePreview || "/placeholder.svg"}
                         alt="Preview"
+                        width={500} // Added width
+                        height={300} // Added height
                         className="w-full h-48 object-cover rounded-lg border border-gray-200"
                       />
                       <p className={`text-xs text-gray-500 mt-1 ${isRTL ? "font-heebo text-right" : ""}`}>
@@ -437,7 +439,7 @@ export default function AdminDashboard() {
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="aspect-square relative">
-                <img src={post.image || "/placeholder.svg"} alt={post.alt} className="w-full h-full object-cover" />
+                <Image src={post.image || "/placeholder.svg"} alt={post.alt} layout="fill" objectFit="cover" /> {/* Replaced img with Image */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center space-x-4">
                   <motion.button
                     whileHover={{ scale: 1.1 }}
