@@ -24,7 +24,7 @@ jobs:
         run: cd my-app && npm ci
 
       - name: Build and export project
-        run: cd my-app && npm run build && npm run export
+        run: cd my-app && npm run build
 
 
       - name: Deploy to GitHub Pages
