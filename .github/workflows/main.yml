@@ -25,7 +25,10 @@ jobs:
 
       - name: Build and export project
         run: cd my-app && npm run build
-
+      - name: Set Git identity
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
       - name: Create gh-pages branch if missing
         run: |
           git fetch origin
