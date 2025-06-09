@@ -29,7 +29,7 @@ export default function PasswordChangeModal({ isOpen, onClose }: PasswordChangeM
   const [isLoading, setIsLoading] = useState(false)
 
   const { changePassword } = useAdmin()
-  const { t, isRTL } = useLanguage()
+  const { isRTL } = useLanguage()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

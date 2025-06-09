@@ -25,7 +25,7 @@ import HomeIcon from "./HomeIcon"
 
 export default function AdminDashboard() {
   const { posts, logout, addPost, removePost, updatePost, clearAllPosts, storageInfo } = useAdmin()
-  const { t, isRTL } = useLanguage()
+  const { isRTL } = useLanguage()
   const [showAddForm, setShowAddForm] = useState(false)
   const [showPasswordModal, setShowPasswordModal] = useState(false)
   const [editingPost, setEditingPost] = useState<string | null>(null)
@@ -118,7 +118,7 @@ export default function AdminDashboard() {
     }
   }
 
-  const handleEdit = (post: any) => {
+  const handleEdit = (post: { image: string; url: string; alt: string; id: string }) => {
     setFormData({
       image: post.image,
       url: post.url,

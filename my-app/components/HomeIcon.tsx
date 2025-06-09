@@ -11,7 +11,7 @@ interface HomeIconProps {
 }
 
 export default function HomeIcon({ position = "top-left", showText = false, variant = "floating" }: HomeIconProps) {
-  const { t, isRTL } = useLanguage()
+  const { isRTL } = useLanguage()
 
   const positionClasses = {
     "top-left": "top-6 left-6",

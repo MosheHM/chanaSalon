@@ -49,9 +49,9 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.5 }}
             className="font-playfair text-5xl md:text-7xl lg:text-8xl font-light leading-tight mb-8"
           >
-            {t("heroTitle" as any)}
+            {t("heroTitle")}
             <br />
-            <span className="italic">{t("heroTitleItalic" as any)}</span>
+            <span className="italic">{t("heroTitleItalic")}</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -61,7 +61,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 1 }}
             className="text-xl md:text-2xl text-gray-700 mb-12 font-light"
           >
-            {t("heroSubtitle" as any)}
+            {t("heroSubtitle")}
           </motion.p>
 
           {/* Hair Strand Graphic */}
@@ -104,7 +104,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 2 }}
           >
             <a href="#booking" className="btn-primary text-lg">
-              {t("bookYourSession" as any)}
+              {t("bookYourSession")}
             </a>
           </motion.div>
         </div>

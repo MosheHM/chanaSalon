@@ -19,37 +19,37 @@ export default function Footer() {
               SANO<span className="text-xs">®</span>
             </motion.div>
             <p className={`text-gray-400 text-sm leading-relaxed ${isRTL ? "font-heebo" : ""}`}>
-              {t("footerTagline" as any)}
+              {t("footerTagline")}
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className={`font-semibold mb-4 ${isRTL ? "font-heebo" : ""}`}>{t("navigation" as any)}</h4>
+            <h4 className={`font-semibold mb-4 ${isRTL ? "font-heebo" : ""}`}>{t("navigation")}</h4>
             <nav className="space-y-2">
               <a
                 href="#about"
                 className={`block text-gray-400 hover:text-white transition-colors ${isRTL ? "font-heebo" : ""}`}
               >
-                {t("about" as any)}
+                {t("about")}
               </a>
               <a
                 href="#services"
                 className={`block text-gray-400 hover:text-white transition-colors ${isRTL ? "font-heebo" : ""}`}
               >
-                {t("services" as any)}
+                {t("services")}
               </a>
               <a
                 href="#gallery"
                 className={`block text-gray-400 hover:text-white transition-colors ${isRTL ? "font-heebo" : ""}`}
               >
-                {t("gallery" as any)}
+                {t("gallery")}
               </a>
               <a
                 href="#booking"
                 className={`block text-gray-400 hover:text-white transition-colors ${isRTL ? "font-heebo" : ""}`}
               >
-                {t("bookYourSession" as any)}
+                {t("bookYourSession")}
               </a>
               <a
                 href="/admin"
@@ -65,26 +65,26 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className={`font-semibold mb-4 ${isRTL ? "font-heebo" : ""}`}>{t("contactInfo" as any)}</h4>
+            <h4 className={`font-semibold mb-4 ${isRTL ? "font-heebo" : ""}`}>{t("contactInfo")}</h4>
             <div className="space-y-3 text-sm">
               <div className={`flex items-center space-x-2 ${isRTL ? "flex-row-reverse space-x-reverse" : ""}`}>
                 <MapPin size={16} className="text-gray-400" />
-                <span className={`text-gray-400 ${isRTL ? "font-heebo" : ""}`}>{t("address" as any)}</span>
+                <span className={`text-gray-400 ${isRTL ? "font-heebo" : ""}`}>{t("address")}</span>
               </div>
               <div className={`flex items-center space-x-2 ${isRTL ? "flex-row-reverse space-x-reverse" : ""}`}>
                 <Phone size={16} className="text-gray-400" />
-                <span className="text-gray-400">{t("phone" as any)}</span>
+                <span className="text-gray-400">{t("phone")}</span>
               </div>
               <div className={`flex items-center space-x-2 ${isRTL ? "flex-row-reverse space-x-reverse" : ""}`}>
                 <Mail size={16} className="text-gray-400" />
-                <span className="text-gray-400">{t("email" as any)}</span>
+                <span className="text-gray-400">{t("email")}</span>
               </div>
             </div>
           </div>
 
           {/* Social Media */}
           <div>
-            <h4 className={`font-semibold mb-4 ${isRTL ? "font-heebo" : ""}`}>{t("followUs" as any)}</h4>
+            <h4 className={`font-semibold mb-4 ${isRTL ? "font-heebo" : ""}`}>{t("followUs")}</h4>
             <div className={`flex space-x-4 ${isRTL ? "flex-row-reverse space-x-reverse" : ""}`}>
               <motion.a
                 whileHover={{ scale: 1.1 }}
@@ -112,7 +112,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className={`border-t border-gray-800 pt-8 text-center ${isRTL ? "font-heebo" : ""}`}>
-          <p className="text-gray-400 text-sm">{t("copyright" as any)}</p>
+          <p className="text-gray-400 text-sm">{t("copyright")}</p>
         </div>
       </div>
     </footer>

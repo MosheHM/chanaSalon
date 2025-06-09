@@ -14,18 +14,18 @@ export default function AboutSection() {
   const advantages = [
     {
       icon: Droplets,
-      title: t("keratinRichTitle" as any),
-      description: t("keratinRichDesc" as any),
+      title: t("keratinRichTitle" ),
+      description: t("keratinRichDesc" ),
     },
     {
       icon: Users,
-      title: t("expertStylistsTitle" as any),
-      description: t("expertStylistsDesc" as any),
+      title: t("expertStylistsTitle" ),
+      description: t("expertStylistsDesc" ),
     },
     {
       icon: Leaf,
-      title: t("sustainablySourcedTitle" as any),
-      description: t("sustainablySourcedDesc" as any),
+      title: t("sustainablySourcedTitle" ),
+      description: t("sustainablySourcedDesc" ),
     },
   ]
 
@@ -41,11 +41,11 @@ export default function AboutSection() {
             className={isRTL ? "lg:col-start-2" : ""}
           >
             <h2 className={`font-playfair text-4xl md:text-5xl font-light mb-8 ${isRTL ? "text-right" : ""}`}>
-              {t("ourPhilosophy" as any)}
+              {t("ourPhilosophy" )}
             </h2>
             <div className={`space-y-6 text-lg text-gray-700 leading-relaxed ${isRTL ? "text-right font-heebo" : ""}`}>
-              <p>{t("aboutText1" as any)}</p>
-              <p>{t("aboutText2" as any)}</p>
+              <p>{t("aboutText1")}</p>
+              <p>{t("aboutText2")}</p>
             </div>
           </motion.div>
 

@@ -20,7 +20,7 @@ export default function AdminLogin({ onSuccess }: AdminLoginProps) {
   const [error, setError] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const { login } = useAdmin()
-  const { t, isRTL } = useLanguage()
+  const { isRTL } = useLanguage()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

@@ -21,7 +21,7 @@ export default function InstagramGallery() {
   const { posts } = useAdmin()
 
   const handleWhatsAppShare = () => {
-    const message = encodeURIComponent(t("whatsappMessage" as any).replace("{comment}", comment))
+    const message = encodeURIComponent(t("whatsappMessage").replace("{comment}", comment))
     window.open(`https://wa.me/972501234567?text=${message}`, "_blank")
   }
 
@@ -35,8 +35,8 @@ export default function InstagramGallery() {
           transition={{ duration: 0.8 }}
           className={`text-center mb-16 ${isRTL ? "font-heebo" : ""}`}
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-light mb-4">{t("ourLatestWork" as any)}</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t("instagramSubtitle" as any)}</p>
+          <h2 className="font-playfair text-4xl md:text-5xl font-light mb-4">{t("ourLatestWork")}</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t("instagramSubtitle")}</p>
         </motion.div>
 
         {/* Instagram Gallery */}
@@ -104,13 +104,13 @@ export default function InstagramGallery() {
           className="max-w-2xl mx-auto"
         >
           <h3 className={`font-playfair text-3xl font-light text-center mb-8 ${isRTL ? "font-heebo" : ""}`}>
-            {t("shareYourThoughts" as any)}
+            {t("shareYourThoughts")}
           </h3>
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <textarea
               value={comment}
               onChange={(e) => setComment(e.target.value)}
-              placeholder={t("commentPlaceholder" as any)}
+              placeholder={t("commentPlaceholder")}
               className={`w-full h-32 p-4 border border-gray-200 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-black/20 ${
                 isRTL ? "text-right font-heebo" : ""
               }`}
@@ -122,7 +122,7 @@ export default function InstagramGallery() {
                 className={`btn-primary flex items-center space-x-2 ${isRTL ? "space-x-reverse font-heebo" : ""}`}
               >
                 <MessageCircle size={20} />
-                <span>{t("sendViaWhatsApp" as any)}</span>
+                <span>{t("sendViaWhatsApp")}</span>
               </button>
             </div>
           </div>
@@ -159,7 +159,7 @@ export default function InstagramGallery() {
               }`}
             >
               <Instagram size={20} />
-              <span>{t("viewOnInstagram" as any)}</span>
+              <span>{t("viewOnInstagram")}</span>
             </a>
           </div>
         </motion.div>

@@ -45,16 +45,16 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className={`hidden md:flex items-center space-x-8 ${isRTL ? "space-x-reverse" : ""}`}>
             <a href="/#about" className="hover:text-gray-600 transition-colors">
-              {t("about" as any)}
+              {t("about")}
             </a>
             <a href="/#services" className="hover:text-gray-600 transition-colors">
-              {t("services" as any)}
+              {t("services")}
             </a>
             <a href="/#gallery" className="hover:text-gray-600 transition-colors">
-              {t("gallery" as any)}
+              {t("gallery")}
             </a>
             <a href="/#contact" className="hover:text-gray-600 transition-colors">
-              {t("contact" as any)}
+              {t("contact")}
             </a>
           </nav>
 
@@ -78,7 +78,7 @@ export default function Header() {
               whileTap={{ scale: 0.95 }}
               className="hidden md:block btn-primary text-sm"
             >
-              {t("bookYourSession" as any)}
+              {t("bookYourSession")}
             </motion.a>
 
             {/* Mobile Menu Toggle */}
@@ -98,19 +98,19 @@ export default function Header() {
           >
             <nav className="flex flex-col space-y-4">
               <a href="/#about" className="hover:text-gray-600 transition-colors">
-                {t("about" as any)}
+                {t("about")}
               </a>
               <a href="/#services" className="hover:text-gray-600 transition-colors">
-                {t("services" as any)}
+                {t("services")}
               </a>
               <a href="/#gallery" className="hover:text-gray-600 transition-colors">
-                {t("gallery" as any)}
+                {t("gallery")}
               </a>
               <a href="/#contact" className="hover:text-gray-600 transition-colors">
-                {t("contact" as any)}
+                {t("contact")}
               </a>
               <a href="/#booking" className="btn-primary text-sm w-fit">
-                {t("bookYourSession" as any)}
+                {t("bookYourSession")}
               </a>
             </nav>
           </motion.div>

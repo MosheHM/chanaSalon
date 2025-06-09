@@ -5,7 +5,6 @@ import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function AdminDebug() {
   const [showDebug, setShowDebug] = useState(false)
-  const { isRTL } = useLanguage()
 
   const getStorageInfo = () => {
     const password = localStorage.getItem("salon_sano_password")
