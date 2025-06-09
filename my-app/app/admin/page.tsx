@@ -3,12 +3,15 @@
 import { useState, useEffect } from "react"
 import AdminLogin from "@/components/AdminLogin"
 import AdminDashboard from "@/components/AdminDashboard"
-import { useAdmin, AdminProvider } from "@/contexts/AdminContext" // Import AdminProvider
+import { useAdmin, AdminProvider } from "@/contexts/AdminContext"
+import { LanguageProvider } from "@/contexts/LanguageContext" // Import LanguageProvider
 
 export default function AdminPage() {
   return (
     <AdminProvider>
-      <AdminContent />
+      <LanguageProvider> {/* Add LanguageProvider here */}
+        <AdminContent />
+      </LanguageProvider>
     </AdminProvider>
   )
 }
