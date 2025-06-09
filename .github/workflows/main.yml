@@ -26,7 +26,18 @@ jobs:
       - name: Build and export project
         run: cd my-app && npm run build
 
-
+      - name: Create gh-pages branch if missing
+        run: |
+          git fetch origin
+          if ! git show-ref --quiet refs/remotes/origin/gh-pages; then
+            git checkout --orphan gh-pages
+            git rm -rf .
+            echo "GitHub Pages branch" > index.html
+            git add index.html
+            git commit -m "Initial commit for GitHub Pages"
+            git push origin gh-pages
+          fi
+          
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
